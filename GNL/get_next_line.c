@@ -110,15 +110,3 @@ char    *get_next_line(int fd)
     polish_list(&list);
     return (next_line);  
 }
-int     main()
-{
-    int     fd;
-    int     lines;
-    char    *line;
-
-    lines = 1;
-    fd = open("test.txt", O_RDONLY);
-
-    while((line = get_next_line(fd)))
-        printf("%d->%s\n", lines++, line);
-}
